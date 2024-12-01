@@ -8,7 +8,7 @@ function embedSWF(url, cont) {
       }
     );
 
-  player.load({ url: url });
+  player.load({ url });
 }
 const searchParams = new URLSearchParams(window.location.search);
 
