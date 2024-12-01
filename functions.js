@@ -1,15 +1,15 @@
-function embedSWF(url, cont, width, height) {
+function embedSWF(url, cont) {
   let ruffle = window.RufflePlayer.newest(),
     player = Object.assign(
       document.getElementById(cont).appendChild(ruffle.createPlayer()),
       {
-        width: width,
-        height: height,
-        style: "width: " + width + "px; height: " + height + "px",
+        style:
+          "width: 100%; height: 100%; position: absolute; top: 0; left: 0;",
       }
     );
 
   player.load({ url: url });
 }
+const searchParams = new URLSearchParams(window.location.search);
 
-embedSWF(`./files/${window.location.pathname}`);
+embedSWF(`./files/${searchParams.get("file")}`, "root");
