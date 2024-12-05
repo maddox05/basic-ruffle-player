@@ -1,4 +1,4 @@
-# embedSWF Function
+# embedSWF
 
 This project demonstrates how to use the `embedSWF` function to dynamically embed SWF files using the Ruffle Player. It enables embedding an SWF file by providing the file name in the URL's query parameters.
 ### Key Features
