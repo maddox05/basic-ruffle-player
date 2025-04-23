@@ -17,4 +17,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BASIC_RUFFLE_PLAYER }}
           channelId: live
-          projectId: learn-duck
+          projectId: basic-ruffle-player
