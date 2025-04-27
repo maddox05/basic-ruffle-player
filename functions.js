@@ -11,5 +11,7 @@ function embedSWF(url, cont) {
   player.load({ url });
 }
 const searchParams = new URLSearchParams(window.location.search);
-
-embedSWF(`./files/${searchParams.get("file")}`, "root");
+if (searchParams.get("file") == null) {
+} else {
+  embedSWF(`./files/${searchParams.get("file")}`, "root");
+}
