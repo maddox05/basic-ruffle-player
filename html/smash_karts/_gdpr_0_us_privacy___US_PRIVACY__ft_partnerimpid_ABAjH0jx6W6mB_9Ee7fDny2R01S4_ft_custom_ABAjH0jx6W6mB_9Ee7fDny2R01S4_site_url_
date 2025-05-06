@@ -1,0 +1,43 @@
+
+var ftGUID_8992628="63355A66EDD5DB";
+var ftConfID_8992628="0";
+var ftParams_8992628="ftOBA=1&ft_domain=skunblocked.com&ft_ifb=1&ft_agentEnv=0&ft_referrer=https://skunblocked.com/&gdpr=0&us_privacy=${US_PRIVACY}&ft_partnerimpid=ABAjH0jx6W6mB_9Ee7fDny2R01S4&ft_custom=ABAjH0jx6W6mB_9Ee7fDny2R01S4&site_url=https://skunblocked.com/&pub_id=1&sup_platform=1&cachebuster=283121.76729101647";
+var ftKeyword_8992628="";
+var ftCustom_8992628="ABAjH0jx6W6mB_9Ee7fDny2R01S4";
+var ftSection_8992628="";
+var ftSegment_8992628="";
+var ftSegmentList_8992628=[];
+var ftRuleMatch_8992628="0";
+var ftTimestamp_8992628="1746546179";
+var ftGeoC2_8992628="us";
+var ftGeoState_8992628="in";
+var ftGeoCity_8992628="west lafayette";
+var ftISP_8992628="purdue university";
+var ftSpeed_8992628="broadband";
+var ftConnType_8992628="wired";
+var ftDMA_8992628="582";
+var ftLong_8992628="-86.88";
+var ftLat_8992628="40.37";
+var ftPostal_8992628="47907";
+var ftTimeZone_8992628="-400";
+var ftMobileCarrier_8992628="";
+var ftImp8992628 = {};
+ftImp8992628.privacy = "x";
+ftImp8992628.guidAge = "-1";
+ftImp8992628.impID = "846F01E0-BA3E-F22F-97EE-1263A5F3E9EA";
+ftImp8992628.duid = "FT:63355A66EDD5DB";
+
+ftImp8992628.ft_tpplid = "";
+ftImp8992628.ft_c = {};
+ftImp8992628.gdpr = "0";
+ftImp8992628.gdpr_consent = "";
+ftImp8992628.gdpr_pd = "";
+ftImp8992628.oob_consent = "";
+ftImp8992628.gdprStoredConsent = "";
+ftImp8992628.us_privacy = "!!US_PRIVACY!";
+ftImp8992628.gpc = "0";
+
+ftImp8992628.jsAppend = "1";
+var ftCreativeId_8992628 = "5035305";
+(function(){var tag=document.getElementById("ft_servedby_8992628")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m8992628";js.setAttribute("name","ftscript_m8992628");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("8992628");
+
