@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      html,
+      body {
+        margin: 0;
+        overflow: hidden;
+        touch-action: none;
+      }
+    </style>
+
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -124,20 +133,17 @@
       <div id="status-notice"></div>
     </div>
 
-    <script
-      src="CrazyCattle3D.js"
-      type="889ed5dc72b628542f497c82-text/javascript"
-    ></script>
-    <script type="889ed5dc72b628542f497c82-text/javascript">
+    <script src="CrazyCattle3D.js"></script>
+    <script>
       const GODOT_CONFIG = {
         args: [],
         canvasResizePolicy: 2,
-        ensureCrossOriginIsolationHeaders: false,
+        ensureCrossOriginIsolationHeaders: true,
         executable: "CrazyCattle3D",
         experimentalVK: false,
         fileSizes: {
-          "CrazyCattle3D.pck": 25322272,
-          "CrazyCattle3D.wasm": 43699190,
+          "CrazyCattle3D.pck": 28642672,
+          "CrazyCattle3D.wasm": 43444261,
         },
         focusCanvas: true,
         gdextensionLibs: [],
@@ -262,10 +268,30 @@
         }
       })();
     </script>
-    <script
-      src="./rocket-loader.min.js"
-      data-cf-settings="889ed5dc72b628542f497c82-|49"
-      defer
-    ></script>
+    <script>
+      document.addEventListener(
+        "touchstart",
+        function (e) {
+          if (e.touches.length > 1) e.preventDefault();
+        },
+        { passive: false }
+      );
+
+      document.addEventListener("gesturestart", function (e) {
+        e.preventDefault();
+      });
+      window.addEventListener(
+        "touchmove",
+        function (e) {
+          if (e.touches[0].clientY < 50) e.preventDefault();
+        },
+        { passive: false }
+      );
+
+      window.addEventListener("beforeunload", function (e) {
+        e.preventDefault();
+        e.returnValue = "";
+      });
+    </script>
   </body>
 </html>
