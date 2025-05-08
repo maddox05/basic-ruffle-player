@@ -214,7 +214,7 @@ var myCnf = {},
               e.locale = "uk";
               break;
             default:
-              e.locale = "ru";
+              e.locale = "en";
           }
         else
           switch ((navigator.language || navigator.userLanguage).slice(0, 2)) {
