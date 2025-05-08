@@ -26505,7 +26505,7 @@ GEMIOLI.Preloader = function () {
                   console.log("Can't load sound atlas", a);
                 }
               );
-          window.adsbygoogle = "hello";
+          window.adsbygoogle = "hi";
           var b = (adConfig = function (a) {
               x = 1;
             }),
@@ -26544,36 +26544,31 @@ GEMIOLI.Preloader = function () {
               window.cpmstarAPI = window["_" + a] = c;
             };
             var e = document.location.protocol,
-              e = "https:" == e || "file:" == e ? "https://server" : "//cdn";
+              e = "https:" == e || "file:" == e ? "https://hahaha" : "//cdn";
             "#cpmstarDev" == window.location.hash && (e = "//dev.server");
-            "#cpmstarStaging" == window.location.hash &&
-              (e = "//staging.server");
-            d.src = e + ".cpmstar.com/cached/zonefiles/" + a + ".js?rnd=" + c;
+            "#cpmstarStaging" == window.location.hash && (e = "//staging.s");
             c = document.getElementsByTagName("script")[0];
-            c.parentNode.insertBefore(d, c);
-            window.cpmstarAPI = function (a) {
-              (b.cmd = b.cmd || []).push(a);
-            };
+            window.cpmstarAPI = function (a) {};
           })("912_31707_gameapi");
           var f = null,
             g = null;
           cpmstarAPI(function (a) {
-            f = new a.game.InterstitialView("interstitial");
-            f.addEventListener("ad_opened", function (a) {
-              GEMIOLI.SoundLoader.ads = !0;
-              GEMIOLI.SoundLoader.mute();
-            });
-            f.addEventListener("ad_closed", function (a) {
-              setTimeout(function () {
-                GEMIOLI.SoundLoader.ads = !1;
-                GEMIOLI.SoundLoader.unmute();
-                var a = g;
-                g = null;
-                a && a(!0);
-              }, 700);
-              f.load();
-            });
-            f.load();
+            // f = new a.game.InterstitialView("interstitial");
+            // f.addEventListener("ad_opened", function (a) {
+            //   GEMIOLI.SoundLoader.ads = !0;
+            //   GEMIOLI.SoundLoader.mute();
+            // });
+            // f.addEventListener("ad_closed", function (a) {
+            //   setTimeout(function () {
+            //     GEMIOLI.SoundLoader.ads = !1;
+            //     GEMIOLI.SoundLoader.unmute();
+            //     var a = g;
+            //     g = null;
+            //     a && a(!0);
+            //   }, 700);
+            //   f.load();
+            // });
+            // f.load();
           });
           var h = function (a, b, c) {
             f && f.isLoaded() ? ((g = c), f.show()) : (f && f.load(), c(!1));
