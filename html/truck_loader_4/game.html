@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zxx" translate=no>
+
+<head>
+    <title>Truck Loader 4 | No Ads | Play It At Friv® 🕹️</title>
+    <meta charset=utf-8>
+    <!-- c -->
+    <link rel="canonical" href="https://www.friv.com/z/games/truckloader4/game.html">
+    <meta content="Work a few shifts loading boxes! It's actually a lot more fun and satisfying than it sounds. Load the boxes into the truck, making sure they're in the correct place and the right way up. Don't let the frustration get to you! Play Truck Loader 4 on Friv!" name=description>
+    <meta content="width=device-width,initial-scale=1" name=viewport>
+    <link href=../../assets/img/frivIcon.png rel="shortcut icon">
+    <link href=../../assets/css/game.css rel=stylesheet>
+
+<body>
+    <div id=lcp></div>
+    <div id=debugText></div>
+    <div id=fullScreenButton></div>
+    <div id=backButton></div>
+    <div id=gameEffectsIndicator></div>
+    <div id=gameEffectsButton></div>
+    <div id=walkthroughButton></div>
+    <div id=orientationOverlay></div>
+    <div id=spare1></div>
+    <div id=loadingOverlay>
+        <div id=spare2></div>
+        <div id=orientationIconLandscape></div>
+        <div id=orientationIconPortrait></div>
+        <div id=loadingBox>
+            <div id=spinnerContainer>
+                <div id=spinner></div>
+                <div id=gameMB></div>
+                <div id=playButton></div>
+            </div>
+        </div>
+        <div id=infoBox>
+            <div id=infoBoxLoadingBar></div>
+            <div id=infoBoxTitle class=notranslate></div>
+            <div id=infoBoxDesc></div>
+            <div id=infoBoxControls class=notranslate></div>
+        </div>
+        <div id=promoBox></div>
+    </div>
+    <div id=gameOverlay></div>
+    <iframe id=gameBox title=gameBox src=about:blank></iframe>
+    <script>
+        var game = {
+            title: "Truck Loader 4",
+
+            enDescription: "Work a few shifts loading boxes! It's actually a lot more fun and satisfying than it sounds. Load the boxes into the truck, making sure they're in the correct place and the right way up. Don't let the frustration get to you!",
+
+            arDescription: "عمل بعض التحولات تحميل الصناديق! إنه في الواقع أكثر متعة وإشباعًا مما يبدو. حمّل الصناديق في الشاحنة ، مع التأكد من وضعها في المكان الصحيح والمقلوب. لا تدع الإحباط يصل إليك!",
+            azDescription: "Bir neçə növbə ilə qutuları yükləyin! Əslində bu, səsləndiyindən daha əyləncəli və əyləncəlidir. Qutuları düzgün yerə və düzgün tərəfi yuxarı olmaqla yük maşınına yükləyin. İzləməyin ki, əsəbiləşməyin!",
+            bgDescription: "Поработете няколко смени, зареждайки кутии! Всъщност е много по-забавно и удовлетворяващо, отколкото звучи. Заредете кутиите в камиона, като се уверите, че са на правилното място и с правилното положение. Не позволявайте на фрустрацията да ви завладее!",
+            bsDescription: "Radi nekoliko smjena utovarujući kutije! To je zapravo puno zabavnije i zadovoljavajuće nego što zvuči. Utovarite kutije u kamion, pazeći da su na pravom mjestu i u pravom položaju. Ne dozvolite da vas frustracija preplavi!",
+            caDescription: "Treballa una mica de torns carregant caixes! És molt més divertit i satisfactori del que sembla. Carrega les caixes al camió, assegurant-te que estiguin al lloc correcte i amb el costat correcte cap amunt. No deixis que la frustració t'arribi!",
+            csDescription: "Odpracujte si pár směn nakládáním krabic! Je to vlastně mnohem zábavnější a uspokojující, než to zní. Nakládejte krabice do nákladního auta, ujistěte se, že jsou na správném místě a správně otočené. Nenechte se frustrovat!",
+            daDescription: "Arbejd et par skift med at læsse kasser! Det er faktisk meget sjovere og mere tilfredsstillende, end det lyder. Læs kasserne ind i lastbilen, og sørg for, at de er på det rigtige sted og med den rigtige side opad. Lad ikke frustrationen overmande dig!",
+            deDescription: "Arbeite ein paar Schichten beim Laden von Kisten! Es ist tatsächlich viel lustiger und befriedigender, als es sich anhört. Laden Sie die Kisten in den LKW, achten Sie darauf, dass sie am richtigen Ort und richtig herum stehen. Lassen Sie sich nicht von der Frustration überwältigen!",
+            elDescription: "Δουλέψτε μερικές βάρδιες φορτώνοντας κουτιά! Είναι πραγματικά πολύ πιο διασκεδαστικό και ικανοποιητικό από όσο ακούγεται. Φορτώστε τα κουτιά στο φορτηγό, φροντίζοντας να είναι στη σωστή θέση και με το σωστό τρόπο. Μην αφήσετε την απογοήτευση να σας καταβάλει!",
+            esDescription: "¡Trabaja algunos turnos cargando cajas! En realidad es mucho más divertido y satisfactorio de lo que parece. Carga las cajas en el camión, asegurándote de que estén en el lugar correcto y con el lado correcto hacia arriba. ¡No dejes que la frustración te supere!",
+            etDescription: "Töötage mõned vahetused kastide laadimisel! See on tegelikult palju lõbusam ja rahuldavam, kui see kõlab. Laadige kastid veoautole, veendudes, että need on õiges kohas ja õige küljega ülespoole. Ärge laske end pettuda!",
+
+            faDescription: "چند شیفت کار تخلیه جعبه ها را انجام دهید! این در واقع بسیار سرگرم کننده تر و رضایت بخش تر از چیزی است که به نظر می رسد. جعبه ها را در کامیون بارگیری کنید، مطمئن شوید که آنها در جای درست و به درستی قرار گرفته اند. اجازه ندهید که ناامیدی بر شما غلبه کند!",
+            fiDescription: "Työskentele muutama vuoro laatikoiden lastaamisessa! Se on itse asiassa paljon hauskempaa ja tyydyttävämpää kuin miltä se kuulostaa. Lataa laatikot kuorma-autoon varmistaen, että ne ovat oikeassa paikassa ja oikein päin. Älä anna turhautumisen päästä käsiin!",
+            frDescription: "Travaillez quelques quarts de travail en chargeant des boîtes ! C'est en fait beaucoup plus amusant et satisfaisant que cela n'y paraît. Chargez les boîtes dans le camion, en vous assurant qu'elles sont au bon endroit et dans le bon sens. Ne laissez pas la frustration vous submerger !",
+            heDescription: "עבדו כמה משמרות בטעינת קופסאות! זה למעשה הרבה יותר כיף ומספק ממה שזה נשמע. טען את הקופסאות למשאית, תוך הקפדה שהן נמצאות במקום הנכון והן הפוכות. אל תתנו לתסכול להגיע אליכם!",
+            hiDescription: "कुछ शिफ्ट बॉक्स लोड करने का काम करें! यह वास्तव में बहुत अधिक मज़ा और संतोषदायक है जितना यह लगता है। ट्रक में बॉक्स लोड करें, यह सुनिश्चित करते हुए कि वे सही जगह पर और सही तरीके से ऊपर हैं। निराशा को अपने ऊपर हावी न होने दें!",
+            hrDescription: "Radi nekoliko smjena utovara kutija! To je zapravo puno zabavnije i zadovoljavajuće nego što zvuči. Utovarite kutije u kamion, pazeći da su na pravom mjestu i u pravom smjeru. Ne dopustite da vas frustracija prevlada!",
+            huDescription: "Dolgozz néhány műszakot dobozok bepakolásában! Valójában sokkal szórakoztatóbb és kielégítőbb, mint ahogy hangzik. Rakodja be a dobozokat a teherautóba, ügyelve arra, hogy a megfelelő helyen és a megfelelő irányban legyenek. Ne engedje, hogy a frusztráció eluralkodjon rajta!",
+            hyDescription: "Աշխատեք մի քանի հերթափոխ տուփեր բեռնելու համար: Դա իրականում շատ ավելի զվարճալի և բավարար է, քան թվում է։ Բեռնեք տուփերը բեռնատարում, համոզվելով, որ դրանք ճիշտ տեղում և ճիշտ կողմով են։ Մի թողեք, որ հիասթափությունը ձեզ տիրանա։",
+            idDescription: "Kerjakan beberapa shift memuat kotak! Ini sebenarnya jauh lebih menyenangkan dan memuaskan daripada kedengarannya. Muat kotak-kotak ke dalam truk, pastikan mereka berada di tempat yang benar dan menghadap ke atas yang benar. Jangan biarkan frustrasi menguasai Anda!",
+            itDescription: "Lavorate qualche turno caricando scatole! È in realtà molto più divertente e soddisfacente di quanto sembra. Caricate le scatole sul camion, assicurandovi che siano nel posto giusto e al rovescio giusto. Non lasciate che la frustrazione vi sopraffaccia!",
+            jaDescription: "箱を積む作業を数シフト行ってください！思ったよりもずっと楽しくて満足できるものです。箱をトラックに積み込み、正しい場所と正しい向きになっていることを確認してください。イライラしないでください！",
+
+            kaDescription: "იმუშავეთ რამდენიმე ცვლაში ყუთების ჩატვირთვით! სინამდვილეში ეს ბევრად უფრო სახალისო და დამაკმაყოფილებელია, ვიდრე ჟღერს. ჩატვირთეთ ყუთები სატვირთო მანქანაში, დარწმუნდით, რომ ისინი სწორ ადგილას და სწორ გზაზე არიან. ნუ მისცემთ უფლებას იმედგაცრუება მოგახვედროთ!",
+
+            koDescription: "상자를 몇 번 옮겨보세요! 생각보다 훨씬 재미있고 만족스러울 겁니다. 상자를 트럭에 올려놓을 때, 올바른 위치와 방향으로 올려놓으세요. 좌절하지 마세요!",
+            ltDescription: "Dirbkite kelias pamainas kraudami dėžes! Tai iš tikrųjų yra daug smagiau ir patenkinamai nei skamba. Įkelkite dėžes į sunkvežimį, įsitikindami, kad jos yra tinkamoje vietoje ir tinkamai apverstos. Nenuleiskite nusivylimo!",
+            lvDescription: "Strādājiet dažas maiņas iekraujot kastes! Tas patiesībā ir daudz jautrāk un apmierinošāk nekā izklausās. Iekraujat kastes kravas automašīnā, pārliecinoties, ka tās ir pareizā vietā un pareizā pusē. Neļaujiet sevi apgūt vilšanās!",
+            mkDescription: "Работете неколку смени товарејќи кутии! Всушност, тоа е многу повеќе забавно и задоволувачко отколку што звучи. Натоварете ги кутиите во камионот, осигурувајќи се дека се на вистинското место и со вистинската страна нагоре. Не дозволувајте фрустрацијата да ве доведе до лудост!",
+            msDescription: "Kerja beberapa syif mengangkut kotak! Sebenarnya ia lebih menyeronokkan dan memuaskan daripada bunyinya. Muatkan kotak-kotak itu ke dalam lori, pastikan ia berada di tempat yang betul dan betul. Jangan biarkan rasa frustrasi mengatasi anda!",
+            nbDescription: "Jobb noen skift med å laste kasser! Det er faktisk mye morsommere og mer tilfredsstillende enn det høres ut. Last kassene inn i lastebilen, sørg for at de er på riktig plass og riktig vei opp. Ikke la frustrasjonen komme til deg!",
+            nlDescription: "Werk een paar shifts met het laden van dozen! Het is eigenlijk veel leuker en bevredigender dan het klinkt. Laad de dozen in de vrachtwagen, zorg ervoor dat ze op de juiste plaats en op de juiste manier staan. Laat de frustratie je niet overmannen!",
+            plDescription: "Pracuj kilka zmian ładując pudełka! To jest tak naprawdę dużo bardziej zabawne i satysfakcjonujące niż brzmi. Załaduj pudełka do ciężarówki, upewniając się, że są w odpowiednim miejscu i odpowiednią stroną do góry. Nie pozwól, aby frustracja Cię dopadła!",
+            ptDescription: "Trabalhe alguns turnos carregando caixas! É realmente muito mais divertido e satisfatório do que parece. Carregue as caixas no caminhão, certificando-se de que estejam no lugar correto e com o lado certo para cima. Não deixe a frustração te pegar!",
+            roDescription: "Lucrați câteva schimburi încărcând cutii! Este de fapt mult mai distractiv și satisfăcător decât sună. Încărcați cutiile în camion, asigurându-vă că sunt în locul potrivit și cu partea dreaptă în sus. Nu lăsați frustrarea să vă afecteze!",
+            ruDescription: "Поработайте несколько смен, загружая коробки! Это на самом деле намного веселее и удовлетворительнее, чем звучит. Загрузите коробки в грузовик, убедившись, что они находятся в правильном месте и правильно расположены. Не позволяйте разочарованию взять верх!",
+            skDescription: "Pracujte niekoľko zmien nakladaním krabíc! Je to skutočne oveľa zábavnejšie a uspokojujúcejšie, než to znie. Nakladajte krabice do nákladného vozidla, uistite sa, že sú na správnom mieste a správnym smerom hore. Nedovoľte, aby vás frustrácia ovládla!",
+
+            slDescription: "Delajte nekaj izmen v nalaganju škatel! Je veliko bolj zabavno in zadovoljujoče, kot se sliši. Naložite škatle v tovornjak, tako da so na pravem mestu in pravilno obrnjene. Ne dovolite, da vas vznemirjenje dobi!",
+            sqDescription: "Punë disa turne duke ngarkuar kuti! Është shumë më argëtuese dhe kënaqëse sesa duket. Ngarkoni kutitë në kamion, duke siguruar që ato të jenë në vendin e duhur dhe me anën e duhur lart. Mos lejoni që frustracioni të ju kapërcej!",
+            srDescription: "Radi nekoliko smena utovarujući kutije! To je zapravo mnogo zabavnije i zadovoljnije nego što zvuči. Utovarite kutije u kamion, vodeći računa da su na pravom mestu i da su pravilno okrenute. Nemojte dozvoliti da vas frustracija savlada!",
+            svDescription: "Jobba några skift med att lasta lådor! Det är faktiskt mycket roligare och mer tillfredsställande än det låter. Ladda lådorna i lastbilen, se till att de är på rätt plats och rätt väg upp. Låt inte frustrationen komma över dig!",
+            tlDescription: "Magtrabaho ng ilang shift sa paglo-load ng mga kahon! Mas masaya at mas nakakatuwa ito kaysa sa tunog nito. I-load ang mga kahon sa trak, siguraduhing nasa tamang lugar at tamang posisyon. Huwag hayaang makuha ka ng frustration!",
+            thDescription: "ทำงานกะล่อมกล่องสักสองสามกะ! มันสนุกและน่าพอใจมากกว่าที่คิดมากเลยนะ โหลดกล่องเข้ารถบรรทุกให้แน่ใจว่าอยู่ในที่ถูกต้องและคว่ำถูกทาง อย่าให้ความหงุดหงิดมาควบคุมคุณ!",
+            trDescription: "Birkaç vardiya kutu yüklemek için çalışın! Aslında kulaktan hoş geldiğinden çok daha eğlenceli ve tatmin edici. Kutucukları kamyona yükleyin, doğru yerde ve doğru şekilde olduğundan emin olun. Kendinizi hayal kırıklığına uğratmayın!",
+            ukDescription: "Працюйте кілька змін, навантажуючи коробки! Це насправді набагато веселіше і задовільніше, ніж звучить. Завантажуйте коробки в вантажівку, переконавшись, що вони знаходяться в правильному місці і правильно повернені. Не дозволяйте розчаруванню взяти над собою гору!",
+            urDescription: "کچھ شفٹوں میں بکس لڈ کریں! یہ دراصل اتنا ہی مزے دار اور اطمینان بخش ہے جتنا کہ لگتا ہے۔ بکسوں کو ٹرک میں لوڈ کریں، یہ یقینی بنائیں کہ وہ صحیح جگہ پر اور صحیح سمت میں ہیں۔ مایوسی کو اپنے اوپر غالب نہ ہونے دیں۔",
+            uzDescription: "Bir necha smentida qutilarni yuklash uchun ishlang! Bu aslida eshitilganidan ham qiziqroq va qoniqarliroq. Qutilarni yuk mashinasiga yuklang, ularning to'g'ri joyda va to'g'ri yo'nalishda ekanligiga ishonch hosil qiling. Ko'ngilsizlikka yo'l qo'ymang!",
+            viDescription: "Làm việc vài ca tải hộp! Nó thực sự thú vị và thỏa mãn hơn nhiều so với âm thanh của nó. Tải các hộp vào xe tải, đảm bảo chúng ở đúng vị trí và đúng chiều. Đừng để sự thất vọng lấn át bạn!",
+            zhDescription: "工作几班装箱！这实际上比听起来更有趣和令人满意。把盒子装进卡车，确保它们在正确的位置和正确的方向。不要让沮丧影响到你！",
+
+            source: "index-x.html",
+            walkthrough: "",
+            loadingSizeMB: 11,
+            loadingSeconds: "auto",
+            controls: "mk",
+            keys: "LRUwadrS",
+            orientation: "Landscape",
+            orientationAdviceRequired: true,
+            showBackButton: true,
+            showGameEffectsButton: false,			timedReloadEnabled: false,			reserveOne: false,			reserveTwo: false,			translationPleaseHelp: true,
+            desktopOnly: false,
+            spare: 0
+        }
+
+    </script>
+    <script src=../../assets/scripts/game.js> </script>
