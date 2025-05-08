@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Игра Яблочный Рыцарь: Мини Подземелья - Vseigru.net</title>
+    <link rel="stylesheet" href="lib/game-loader/gameloader.css" />
+    <script src="lib/game-loader/gameloader.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      var options = {
+        author: "Vseigru",
+        logo: "logo.jpg",
+        gameName: "Яблочный Рыцарь: Мини Подземелья",
+        gameNameEu: "Apple Knight: Mini Dungeons",
+        gameUrl: "40783",
+        moreLink: "",
+        allowFullscreen: true,
+        locale: "ru_RU",
+        loader: "iframe",
+        loaderOptions: {
+          url: "game.html",
+          sandbox: "sandboxOptions",
+          sandboxOptions: [
+            "allow-pointer-lock",
+            "allow-same-origin",
+            "allow-scripts",
+            "allow-modals",
+          ],
+        },
+      };
+      GameInit.load(options);
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'89f353d61ec75c37',t:'MTcyMDMwODA0OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
