@@ -4312,17 +4312,8 @@ var d = document.domain,
   dd = window.location.host,
   u = window.location.pathname;
 
-var _Kiz10continue = 1;
+var _Kiz10continue = 0;
 var _isInIFrame = window.location != window.parent.location;
-if (_isInIFrame == true) {
-  // iframe
-  console.log("In IFrame");
-  _Kiz10continue = 1;
-} else {
-  // no iframe
-  console.log("Not in IFrame");
-  _Kiz10continue = 0;
-}
 
 function protoCr2() {
   this.d =
