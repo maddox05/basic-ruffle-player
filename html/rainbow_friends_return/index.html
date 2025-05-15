@@ -159,25 +159,7 @@
       }
 
       function IsLocalHost() {
-        try {
-          if (window.top !== window) {
-            console.warn("The application is running in an iframe");
-            return false;
-          }
-
-          const host = window.location.hostname;
-          if (
-            host === "localhost" ||
-            host === "127.0.0.1" ||
-            host.endsWith(".local")
-          ) {
-            LogStyledMessage("Local Host");
-            return true;
-          }
-        } catch (error) {
-          console.error("Error checking the local host:", error);
-          return false;
-        }
+        return true;
       }
 
       function YG2Instance(method) {
