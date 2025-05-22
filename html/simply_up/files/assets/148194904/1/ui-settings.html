@@ -1,41 +1,196 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en" style="background-color: grey">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>ducky</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lilita+One&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/ui.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lilita+One&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/ui.css">
-</head>
-
-<body class="modal-open" style="font-family: 'Lilita One', serif;width: 100%;height: 100%;user-select: none;">
-    <div class="modal fade show element-scale-large settings-modal" role="dialog" tabindex="-1" id="modal-1" style="background: rgba(33,37,41,0.8);height: 100%;display: flex;transform: scale(1.30);">
-        <div class="modal-dialog animate__flipInX animate__animated" role="document" style="margin:auto;width:100%; max-width:400px">
-            <div class="modal-content">
-                <div class="modal-header" style="background: #12a220;color: var(--bs-body-bg);">
-                    <h4 class="modal-title" style="color: var(--bs-body-bg);font-size: 35px;line-height: 45px;text-shadow: 0px 0px 5px rgb(15,29,44);margin: 0px auto;">SETTINGS</h4>
-                </div>
-                <div class="modal-body" style="max-height: calc(100vh - 225px); overflow: auto;"><label class="form-label">QUALITY</label>
-                    <div class="form-check"><input class="form-check-input" type="radio" id="quality-1" name="quality" value="android"><label class="form-check-label" for="quality-1">Low</label></div>
-                    <div class="form-check"><input class="form-check-input" type="radio" id="quality-2" name="quality" value="ios"><label class="form-check-label" for="quality-2">Medium</label></div>
-                    <div class="form-check"><input class="form-check-input" type="radio" id="quality-3" name="quality" value="desktop"><label class="form-check-label" for="quality-3">High</label></div><label class="form-label" style="margin-top: 10px;">PLAYER</label>
-                    <fieldset><label class="form-label">Camera Sensitivity</label><label class="form-label">:&nbsp;</label><label class="form-label" id="settings-cameraSensitivity-value">1.00</label><input class="form-range" type="range" id="settings-cameraSensitivity" min="0.1" max="2.0" step="0.01" value="1.0"></fieldset>
-                    <div class="form-check"><input class="form-check-input" type="checkbox" id="settings-lockCameraToPlayerRotation"><label class="form-check-label" for="settings-lockCameraToPlayerRotation">Camera to Player Lock</label></div>
-                    <div class="form-check"><input class="form-check-input" type="checkbox" id="settings-mouse-pointer-lock"><label class="form-check-label" for="settings-mouse-pointer-lock">Mouse Pointer Lock</label></div>
-                    <div class="form-check" data-pc-referrer-hide="poki.com,poki.dev"><input class="form-check-input" type="checkbox" id="settings-fullscreen"><label class="form-check-label" for="settings-fullscreen">Fullscreen</label></div>
-                    <div class="form-check"><input class="form-check-input" type="checkbox" id="settings-sounds"><label class="form-check-label" for="settings-sounds">Audio</label></div>
-                    <div class="form-check" style="display:none;"><input class="form-check-input" type="checkbox" id="settings-music"><label class="form-check-label" for="settings-music">Music</label></div>
-                </div>
-                <div class="modal-footer" style="background: linear-gradient(var(--bs-body-bg) 1%, white);"><button class="btn btn-light" type="button" data-bs-dismiss="modal" data-pc-page-close="">CLOSE</button><button class="btn btn-primary" type="button" data-pc-btn-click="interface:settings:save" data-pc-page-close="" style="background: #12a220;" data-pc-trigger-click="interface:input:jump">SAVE<i class="far fa-arrow-alt-circle-up" style="margin-left: 5px;"></i></button></div>
+  <body
+    class="modal-open"
+    style="
+      font-family: 'Lilita One', serif;
+      width: 100%;
+      height: 100%;
+      user-select: none;
+    "
+  >
+    <div
+      class="modal fade show element-scale-large settings-modal"
+      role="dialog"
+      tabindex="-1"
+      id="modal-1"
+      style="
+        background: rgba(33, 37, 41, 0.8);
+        height: 100%;
+        display: flex;
+        transform: scale(1.3);
+      "
+    >
+      <div
+        class="modal-dialog animate__flipInX animate__animated"
+        role="document"
+        style="margin: auto; width: 100%; max-width: 400px"
+      >
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background: #12a220; color: var(--bs-body-bg)"
+          >
+            <h4
+              class="modal-title"
+              style="
+                color: var(--bs-body-bg);
+                font-size: 35px;
+                line-height: 45px;
+                text-shadow: 0px 0px 5px rgb(15, 29, 44);
+                margin: 0px auto;
+              "
+            >
+              SETTINGS
+            </h4>
+          </div>
+          <div
+            class="modal-body"
+            style="max-height: calc(100vh - 225px); overflow: auto"
+          >
+            <label class="form-label">QUALITY</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="quality-1"
+                name="quality"
+                value="android"
+              /><label class="form-check-label" for="quality-1">Low</label>
             </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="quality-2"
+                name="quality"
+                value="ios"
+              /><label class="form-check-label" for="quality-2">Medium</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="quality-3"
+                name="quality"
+                value="desktop"
+              /><label class="form-check-label" for="quality-3">High</label>
+            </div>
+            <label class="form-label" style="margin-top: 10px">PLAYER</label>
+            <fieldset>
+              <label class="form-label">Camera Sensitivity</label
+              ><label class="form-label">:&nbsp;</label
+              ><label class="form-label" id="settings-cameraSensitivity-value"
+                >1.00</label
+              ><input
+                class="form-range"
+                type="range"
+                id="settings-cameraSensitivity"
+                min="0.1"
+                max="2.0"
+                step="0.01"
+                value="1.0"
+              />
+            </fieldset>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="settings-lockCameraToPlayerRotation"
+              /><label
+                class="form-check-label"
+                for="settings-lockCameraToPlayerRotation"
+                >Camera to Player Lock</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="settings-mouse-pointer-lock"
+              /><label
+                class="form-check-label"
+                for="settings-mouse-pointer-lock"
+                >Mouse Pointer Lock</label
+              >
+            </div>
+            <div class="form-check" data-pc-referrer-hide="poki.com,poki.dev">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="settings-fullscreen"
+              /><label class="form-check-label" for="settings-fullscreen"
+                >Fullscreen</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="settings-sounds"
+              /><label class="form-check-label" for="settings-sounds"
+                >Audio</label
+              >
+            </div>
+            <div class="form-check" style="display: none">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="settings-music"
+              /><label class="form-check-label" for="settings-music"
+                >Music</label
+              >
+            </div>
+          </div>
+          <div
+            class="modal-footer"
+            style="background: linear-gradient(var(--bs-body-bg) 1%, white)"
+          >
+            <button
+              class="btn btn-light"
+              type="button"
+              data-bs-dismiss="modal"
+              data-pc-page-close=""
+            >
+              CLOSE</button
+            ><button
+              class="btn btn-primary"
+              type="button"
+              data-pc-btn-click="interface:settings:save"
+              data-pc-page-close=""
+              style="background: #12a220"
+              data-pc-trigger-click="interface:input:jump"
+            >
+              SAVE<i
+                class="far fa-arrow-alt-circle-up"
+                style="margin-left: 5px"
+              ></i>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-</body>
-
+  </body>
 </html>

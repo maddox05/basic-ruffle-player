@@ -1,44 +1,221 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en" style="background-color: grey">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>ducky</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lilita+One&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/ui.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lilita+One&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/ui.css">
-</head>
-
-<body class="modal-open" style="font-family: 'Lilita One', serif;width: 100%;height: 100%;user-select: none;">
-    <div class="modal fade show element-scale-large settings-modal" role="dialog" tabindex="-1" id="modal-1" style="background: rgba(33,37,41,0.8);height: 100%;display: flex;transform: scale(1.30);">
-        <div class="modal-dialog animate__flipInX animate__animated" role="document" style="margin:auto;width:100%; max-width:400px">
-            <div class="modal-content">
-                <div class="modal-header" style="background: #12a220;color: var(--bs-body-bg);">
-                    <h4 class="modal-title" style="color: var(--bs-body-bg);font-size: 35px;line-height: 35px;text-shadow: 0px 0px 5px rgb(15,29,44);margin: 0px auto;">LOCKER<i class="fas fa-user-tie" style="float: left;margin-right: 20px;font-size: 25px;margin-top: 8px;"></i><i class="fas fa-user-tag" style="float: right;margin-left: 20px;font-size: 25px;margin-top: 8px;"></i></h4>
+  <body
+    class="modal-open"
+    style="
+      font-family: 'Lilita One', serif;
+      width: 100%;
+      height: 100%;
+      user-select: none;
+    "
+  >
+    <div
+      class="modal fade show element-scale-large settings-modal"
+      role="dialog"
+      tabindex="-1"
+      id="modal-1"
+      style="
+        background: rgba(33, 37, 41, 0.8);
+        height: 100%;
+        display: flex;
+        transform: scale(1.3);
+      "
+    >
+      <div
+        class="modal-dialog animate__flipInX animate__animated"
+        role="document"
+        style="margin: auto; width: 100%; max-width: 400px"
+      >
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background: #12a220; color: var(--bs-body-bg)"
+          >
+            <h4
+              class="modal-title"
+              style="
+                color: var(--bs-body-bg);
+                font-size: 35px;
+                line-height: 35px;
+                text-shadow: 0px 0px 5px rgb(15, 29, 44);
+                margin: 0px auto;
+              "
+            >
+              LOCKER<i
+                class="fas fa-user-tie"
+                style="
+                  float: left;
+                  margin-right: 20px;
+                  font-size: 25px;
+                  margin-top: 8px;
+                "
+              ></i
+              ><i
+                class="fas fa-user-tag"
+                style="
+                  float: right;
+                  margin-left: 20px;
+                  font-size: 25px;
+                  margin-top: 8px;
+                "
+              ></i>
+            </h4>
+          </div>
+          <div
+            class="modal-body"
+            style="max-height: calc(100vh - 225px); overflow: auto"
+          >
+            <div
+              class="carousel slide"
+              data-bs-ride="carousel"
+              id="carousel-1"
+              style="background: linear-gradient(0deg, #05181e, #217d9a)"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" id="male-1">
+                  <img
+                    class="w-100 d-block"
+                    src="assets/img/male-1-thumb.png"
+                    alt="Slide Image"
+                  />
                 </div>
-                <div class="modal-body" style="max-height: calc(100vh - 225px); overflow: auto;">
-                    <div class="carousel slide" data-bs-ride="carousel" id="carousel-1" style="background: linear-gradient(0deg, #05181e, #217d9a);">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" id="male-1"><img class="w-100 d-block" src="assets/img/male-1-thumb.png" alt="Slide Image"></div>
-                            <div class="carousel-item" id="female-1"><img class="w-100 d-block" src="assets/img/female-1-thumb.png" alt="Slide Image"></div>
-                            <div class="carousel-item" id="male-2"><img class="w-100 d-block" src="assets/img/male-2-thumb.png" alt="Slide Image"></div>
-                            <div class="carousel-item" id="female-2"><img class="w-100 d-block" src="assets/img/female-2-thumb.png" alt="Slide Image"></div>
-                            <div class="carousel-item" id="male-3"><img class="w-100 d-block" src="assets/img/male-3-thumb.png" alt="Slide Image"></div>
-                            <div class="carousel-item" id="female-3"><img class="w-100 d-block" src="assets/img/female-3-thumb.png" alt="Slide Image"></div>
-                        </div>
-                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-                        <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="3"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="4"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="5"></button></div>
-                    </div>
+                <div class="carousel-item" id="female-1">
+                  <img
+                    class="w-100 d-block"
+                    src="assets/img/female-1-thumb.png"
+                    alt="Slide Image"
+                  />
                 </div>
-                <div class="modal-footer" style="background: linear-gradient(var(--bs-body-bg) 1%, white);"><button class="btn btn-light" type="button" data-bs-dismiss="modal" data-pc-page-close="">CLOSE</button><button class="btn btn-primary" type="button" data-pc-page-close="" style="background: #12a220;" data-pc-btn-click="interface:locker:save">SELECT<i class="far fa-arrow-alt-circle-up" style="margin-left: 5px;" data-pc-trigger-click="interface:input:jump"></i></button></div>
+                <div class="carousel-item" id="male-2">
+                  <img
+                    class="w-100 d-block"
+                    src="assets/img/male-2-thumb.png"
+                    alt="Slide Image"
+                  />
+                </div>
+                <div class="carousel-item" id="female-2">
+                  <img
+                    class="w-100 d-block"
+                    src="assets/img/female-2-thumb.png"
+                    alt="Slide Image"
+                  />
+                </div>
+                <div class="carousel-item" id="male-3">
+                  <img
+                    class="w-100 d-block"
+                    src="assets/img/male-3-thumb.png"
+                    alt="Slide Image"
+                  />
+                </div>
+                <div class="carousel-item" id="female-3">
+                  <img
+                    class="w-100 d-block"
+                    src="assets/img/female-3-thumb.png"
+                    alt="Slide Image"
+                  />
+                </div>
+              </div>
+              <div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carousel-1"
+                  role="button"
+                  data-bs-slide="prev"
+                  ><span class="carousel-control-prev-icon"></span
+                  ><span class="visually-hidden">Previous</span></a
+                ><a
+                  class="carousel-control-next"
+                  href="#carousel-1"
+                  role="button"
+                  data-bs-slide="next"
+                  ><span class="carousel-control-next-icon"></span
+                  ><span class="visually-hidden">Next</span></a
+                >
+              </div>
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carousel-1"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carousel-1"
+                  data-bs-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carousel-1"
+                  data-bs-slide-to="2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carousel-1"
+                  data-bs-slide-to="3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carousel-1"
+                  data-bs-slide-to="4"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carousel-1"
+                  data-bs-slide-to="5"
+                ></button>
+              </div>
             </div>
+          </div>
+          <div
+            class="modal-footer"
+            style="background: linear-gradient(var(--bs-body-bg) 1%, white)"
+          >
+            <button
+              class="btn btn-light"
+              type="button"
+              data-bs-dismiss="modal"
+              data-pc-page-close=""
+            >
+              CLOSE</button
+            ><button
+              class="btn btn-primary"
+              type="button"
+              data-pc-page-close=""
+              style="background: #12a220"
+              data-pc-btn-click="interface:locker:save"
+            >
+              SELECT<i
+                class="far fa-arrow-alt-circle-up"
+                style="margin-left: 5px"
+                data-pc-trigger-click="interface:input:jump"
+              ></i>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-</body>
-
+  </body>
 </html>

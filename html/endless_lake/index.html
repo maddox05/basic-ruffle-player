@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no;"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no;"
+    />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Endless Lake</title>
-    <script type="text/javascript" src="http://cdn.gameplayer.io/api/js/game.js"></script>
-    <script type="text/javascript" src="http://cdn.gameplayer.io/api/js/developer.js"></script>
+    <title>ducky</title>
+    <script
+      type="text/javascript"
+      src="http://cdn.gameplayer.io/api/js/game.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://cdn.gameplayer.io/api/js/developer.js"
+    ></script>
 
     <script type="text/javascript" src="game.min.js"></script>
-  
+  </head>
+  <body>
+    <div id="gameContainer">
+      <canvas id="canvas"></canvas>
 
-</head>
-<body>
-<div id = 'gameContainer'>
-    <canvas id="canvas"></canvas>
-
-
-    <script type="text/javascript">
-
+      <script type="text/javascript">
         var SpilData = {
-            id: '576742227280296759'
+          id: "576742227280296759",
         };
         var Api = null;
         var LOGO;
@@ -52,39 +56,32 @@
                 e.preventDefault();
             }
         }, false);*/
-        window.addEventListener('resize', function() {
-            if (game.device.iOS)
-            {
-                setTimeout(function() {
-                    game.system._onWindowResize();
-                }, 500);
-                setTimeout(function() {
-                    game.system._onWindowResize();
-                }, 800);
-                setTimeout(function() {
-                    game.system.checkOrientation();
-                }, 1000);
-
-            }
+        window.addEventListener("resize", function () {
+          if (game.device.iOS) {
+            setTimeout(function () {
+              game.system._onWindowResize();
+            }, 500);
+            setTimeout(function () {
+              game.system._onWindowResize();
+            }, 800);
+            setTimeout(function () {
+              game.system.checkOrientation();
+            }, 1000);
+          }
         });
 
-        window.onclick = function() {
-
-            this.focus();
-
+        window.onclick = function () {
+          this.focus();
         };
 
-
-            GameAPI.loadAPI (function (apiInstance) {
-                // The API is ready for use.
-                Api = apiInstance;
-                //if (window.console && window.console.log) {
-                    //console.log('GameAPI version ' + apiInstance.version + ' loaded!');
-                //}
-            }, SpilData);
-
-
-    </script>
-</div>
-</body>
+        GameAPI.loadAPI(function (apiInstance) {
+          // The API is ready for use.
+          Api = apiInstance;
+          //if (window.console && window.console.log) {
+          //console.log('GameAPI version ' + apiInstance.version + ' loaded!');
+          //}
+        }, SpilData);
+      </script>
+    </div>
+  </body>
 </html>

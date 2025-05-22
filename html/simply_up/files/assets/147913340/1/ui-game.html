@@ -1,64 +1,516 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en" style="background-color: grey">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>ducky</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lilita+One&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/ui.css" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lilita+One&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/ui.css">
-</head>
-
-<body style="background: transparent;font-family: 'Lilita One', serif;pointer-events: none;width: 100%;height: 100%;user-select: none;">
-    <nav class="navbar navbar-expand fixed-top bg-transparent nav-header-big" data-bs-theme="dark">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navcol-2">
-                <ul class="navbar-nav mx-auto nav-header">
-                    <li class="nav-item element-scale" style="text-align: center;font-size: 25px;text-shadow: 0px 0px 5px rgb(15,29,44);"><a class="nav-link active animate__animated animate__rubberBand" style="font-size: 42px;text-align: center;user-select:none;" data-pc-text-set="text:time-indicator:set">00:00</a></li>
-                </ul>
-            </div>
+  <body
+    style="
+      background: transparent;
+      font-family: 'Lilita One', serif;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      user-select: none;
+    "
+  >
+    <nav
+      class="navbar navbar-expand fixed-top bg-transparent nav-header-big"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navcol-2">
+          <ul class="navbar-nav mx-auto nav-header">
+            <li
+              class="nav-item element-scale"
+              style="
+                text-align: center;
+                font-size: 25px;
+                text-shadow: 0px 0px 5px rgb(15, 29, 44);
+              "
+            >
+              <a
+                class="nav-link active animate__animated animate__rubberBand"
+                style="font-size: 42px; text-align: center; user-select: none"
+                data-pc-text-set="text:time-indicator:set"
+                >00:00</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <nav class="navbar navbar-expand fixed-bottom bg-transparent nav-header-big" data-bs-theme="dark">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navcol-3">
-                <ul class="navbar-nav mx-auto nav-footer">
-                    <li class="nav-item element-scale" style="text-align: center;font-size: 25px;text-shadow: 0px 0px 5px rgb(15,29,44);"><a class="nav-link active animate__animated animate__rubberBand" style="font-size: 42px;text-align: center;user-select:none;" data-pc-text-set="text:height-indicator:set">- 132m -</a></li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand fixed-bottom bg-transparent nav-header-big"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navcol-3">
+          <ul class="navbar-nav mx-auto nav-footer">
+            <li
+              class="nav-item element-scale"
+              style="
+                text-align: center;
+                font-size: 25px;
+                text-shadow: 0px 0px 5px rgb(15, 29, 44);
+              "
+            >
+              <a
+                class="nav-link active animate__animated animate__rubberBand"
+                style="font-size: 42px; text-align: center; user-select: none"
+                data-pc-text-set="text:height-indicator:set"
+                >- 132m -</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <nav class="navbar navbar-expand fixed-top bg-transparent nav-header-big" data-bs-theme="dark">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav ms-auto nav-big" style="width: 75px;">
-                    <li class="nav-item element-scale" style="text-align: center;font-size: 25px;text-shadow: 0px 0px 5px rgb(15,29,44);"><a class="nav-link active animate__animated animate__fadeInLeft animate__faster" data-pc-page-change="ui-menu" style="width: 50px;font-size: 42px; pointer-events: all;user-select:none;" href="#"><i class="fas fa-bars"></i></a><a class="nav-link animate__animated animate__fadeInLeft animate__faster" style="width: 50px;font-size: 42px;pointer-events: all;user-select: none;color: var(--bs-navbar-brand-color);" href="#" data-pc-btn-click="uranusControllerPlayerEmojis:toggle"><i class="fas fa-smile-wink"></i></a></li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand fixed-top bg-transparent nav-header-big"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto nav-big" style="width: 75px">
+            <li
+              class="nav-item element-scale"
+              style="
+                text-align: center;
+                font-size: 25px;
+                text-shadow: 0px 0px 5px rgb(15, 29, 44);
+              "
+            >
+              <a
+                class="nav-link active animate__animated animate__fadeInLeft animate__faster"
+                data-pc-page-change="ui-menu"
+                style="
+                  width: 50px;
+                  font-size: 42px;
+                  pointer-events: all;
+                  user-select: none;
+                "
+                href="#"
+                ><i class="fas fa-bars"></i></a
+              ><a
+                class="nav-link animate__animated animate__fadeInLeft animate__faster"
+                style="
+                  width: 50px;
+                  font-size: 42px;
+                  pointer-events: all;
+                  user-select: none;
+                  color: var(--bs-navbar-brand-color);
+                "
+                href="#"
+                data-pc-btn-click="uranusControllerPlayerEmojis:toggle"
+                ><i class="fas fa-smile-wink"></i
+              ></a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <div class="container-sm action-label-container" style="height: 140px;position: absolute;top: 10%;max-width: 100%;padding-right: 30px;padding-left: 30px;display: none;"><button class="btn btn-primary button-action animate__animated animate__bounce action-label icon-action" type="button" style="font-size: 35px;background: transparent;border-style: none;text-shadow: 0px 0px 5px rgb(15,29,44);display: block;pointer-events:all"><i class="far fa-arrow-alt-circle-up"></i><span style="margin-left: 5px;margin-right: 5px;">CHECKPOINT</span><span>[C]</span><span class="action-label-indicator" style="display: block; font-size: 23px;" data-pc-text-set="text:checkpoint-indicator:set">- 145m -</span></button><button class="btn btn-primary button-action animate__animated animate__bounce action-label icon-action" type="button" style="font-size: 35px;background: transparent;border-style: none;text-shadow: 0px 0px 5px rgb(15,29,44);display: block;pointer-events: all;margin-top: 10px;"><img src="assets/img/icon-reward-bw.png" style="width: 30px;height: 30px;margin-right: 5px;"><span style="margin-left: 5px;margin-right: 5px;">RESPAWN</span><span>[R]</span><span class="action-label-indicator" style="display: block; font-size: 23px;" data-pc-text-set="text:respawn-indicator:set">- 145m -</span></button></div>
-    <div class="container-sm text-center controls-big" style="height: 170px;position: absolute;bottom: 10%;max-width: 100%;padding-right: 30px;padding-left: 30px;"><button class="btn btn-primary button-action animate__animated animate__bounce" type="button" style="background: transparent;border-style: none;text-shadow: 0px 0px 5px rgb(15,29,44);float: right;font-size: 90px;" title="Jump"><i class="far fa-arrow-alt-circle-up icon-action" data-pc-btn-pressed="interface:player:jump" style="pointer-events: all;"></i></button></div>
-    <div class="d-flex mx-auto masthead" style="height: 100%;min-height: 100%;background: none;">
-        <div class="container text-center ad-checkpoint-container" style="margin-right: 0;position: absolute;display: block;top: 10%;left: 0px;padding: 0px;z-index: 10000;" data-pc-element-show="ad:respawnCheckpointButton:show" data-pc-element-hide="ad:respawnCheckpointButton:hide">
-            <div class="ad-container ad-container-green animate__bounceInLeft animate__animated" style="height: 65px;background: linear-gradient(90deg, var(--bs-body-bg) 75%, #12a220 91%);position: relative;box-shadow: 0px 3px 5px 0px rgba(33,37,41,0.64);cursor: pointer;pointer-events: all;max-width: 405px;" data-pc-btn-click="ad:watch:respawnCheckpoint" data-pc-trigger-click="input:keyboard:KEY_C" data-pc-parent-close=""><span style="position: absolute;left: 20px;display: block;margin-top: 8px;margin-left: 10px;text-align: left;font-size: 33px;margin-right: 00px;color: var(--bs-body-color);"><img class="ad-thumbnail" src="assets/img/icon-street-lights.png" style="width: 45px;height: 45px;margin-right: 15px;margin-top:-13px"><span>CHECKPOINT</span><span class="hide-on-mobile">&nbsp;[C]</span><span class="action-label-indicator" style="font-size: 21px;margin-left: 5px;" data-pc-text-set="text:checkpoint-indicator:set">&nbsp;145m&nbsp;</span></span></div>
-        </div>
-        <div class="container text-center ad-respawn-container" style="margin-right: 0;position: absolute;display: block;top: calc(10% + 100px);left: 0px;padding: 0px;z-index: 10000;" data-pc-element-show="ad:respawnLastButton:show" data-pc-element-hide="ad:respawnLastButton:hide">
-            <div class="ad-container ad-container-blue animate__bounceInLeft animate__animated" style="height: 65px;background: linear-gradient(90deg, var(--bs-body-bg) 63%, #2d91bb 77%);position: relative;box-shadow: 0px 3px 5px 0px rgba(33,37,41,0.64);cursor: pointer;pointer-events: all;max-width: 405px;" data-pc-btn-click="ad:watch:respawnLast" data-pc-trigger-click="input:keyboard:KEY_R" data-pc-parent-close=""><span style="position: absolute;left: 20px;display: block;margin-top: 8px;margin-left: 10px;text-align: left;font-size: 33px;margin-right: 20px;color: var(--bs-body-color);"><img class="ad-thumbnail" src="assets/img/icon-reward-bw.png" style="width: 45px;height: 45px;margin-right: 15px;margin-top:-13px"><span>RESPAWN!</span><span class="hide-on-mobile">&nbsp;[R]</span><span class="action-label-indicator" style="font-size: 21px;margin-left: 5px;" data-pc-text-set="text:respawn-indicator:set">&nbsp;145m</span></span></div>
-        </div>
-        <div class="container text-center ad-respawn-container" style="margin-right: 0;position: absolute;display: none;top: calc(10% + 100px);left: 0px;padding: 0px;z-index: 10000;" data-pc-element-show="ad:travelUpButton:show" data-pc-element-hide="ad:travelUpButton:hide">
-            <div class="ad-container ad-container-red animate__bounceInLeft animate__animated" style="height: 65px;background: linear-gradient(90deg, var(--bs-body-bg) 63%, #dc8929 77%);position: relative;box-shadow: 0px 3px 5px 0px rgba(33,37,41,0.64);cursor: pointer;pointer-events: all;max-width: 405px;" data-pc-btn-click="ad:watch:travelUp" data-pc-trigger-click="input:keyboard:KEY_T" data-pc-parent-close=""><span style="position: absolute;left: 20px;display: block;margin-top: 8px;margin-left: 10px;text-align: left;font-size: 33px;margin-right: 20px;color: var(--bs-body-color);"><img class="ad-thumbnail" src="assets/img/icon-reward-bw.png" style="width: 45px;height: 45px;margin-right: 15px;margin-top:-13px"><span>TRAVEL UP</span><span class="hide-on-mobile">&nbsp;[T]</span><span class="action-label-indicator" style="font-size: 21px;margin-left: 5px;" data-pc-text-set="text:travelUp-indicator:set">300m</span></span></div>
-        </div>
-        <div class="container text-center ad-save-container" style="margin-right: 0;position: absolute;display: none;top: 20%;left: 0px;padding: 0px;z-index: 10000;" data-pc-element-show="ad:saveCheckpoint:show" data-pc-element-hide="ad:saveCheckpoint:hide">
-            <div class="ad-container ad-container-green animate__bounceInLeft animate__animated" style="height: 65px;background: linear-gradient(90deg, var(--bs-body-bg) 63%, #12a220 77%);position: relative;box-shadow: 0px 3px 5px 0px rgba(33,37,41,0.64);cursor: pointer;pointer-events: all;max-width: 405px;" data-pc-btn-click="ad:watch:saveCheckpoint" data-pc-trigger-click="input:keyboard:KEY_C" data-pc-parent-close=""><span style="position: absolute;left: 20px;display: block;margin-top: 8px;margin-left: 10px;text-align: left;font-size: 33px;margin-right: 20px;color: var(--bs-body-color);"><img class="ad-thumbnail" src="assets/img/icon-reward-bw.png" style="width: 45px;height: 45px;margin-right: 15px;margin-top:-13px"><img src="assets/img/icon-street-lights.png" width="40" height="40" style="position: absolute;float: right;right: -60Px;margin-top: 4px;z-index: 10;"><span>CHECKPOINT</span><span class="hide-on-mobile" style="margin-left: 5px;">[C]</span></span></div>
-        </div>
+    <div
+      class="container-sm action-label-container"
+      style="
+        height: 140px;
+        position: absolute;
+        top: 10%;
+        max-width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+        display: none;
+      "
+    >
+      <button
+        class="btn btn-primary button-action animate__animated animate__bounce action-label icon-action"
+        type="button"
+        style="
+          font-size: 35px;
+          background: transparent;
+          border-style: none;
+          text-shadow: 0px 0px 5px rgb(15, 29, 44);
+          display: block;
+          pointer-events: all;
+        "
+      >
+        <i class="far fa-arrow-alt-circle-up"></i
+        ><span style="margin-left: 5px; margin-right: 5px">CHECKPOINT</span
+        ><span>[C]</span
+        ><span
+          class="action-label-indicator"
+          style="display: block; font-size: 23px"
+          data-pc-text-set="text:checkpoint-indicator:set"
+          >- 145m -</span
+        ></button
+      ><button
+        class="btn btn-primary button-action animate__animated animate__bounce action-label icon-action"
+        type="button"
+        style="
+          font-size: 35px;
+          background: transparent;
+          border-style: none;
+          text-shadow: 0px 0px 5px rgb(15, 29, 44);
+          display: block;
+          pointer-events: all;
+          margin-top: 10px;
+        "
+      >
+        <img
+          src="assets/img/icon-reward-bw.png"
+          style="width: 30px; height: 30px; margin-right: 5px"
+        /><span style="margin-left: 5px; margin-right: 5px">RESPAWN</span
+        ><span>[R]</span
+        ><span
+          class="action-label-indicator"
+          style="display: block; font-size: 23px"
+          data-pc-text-set="text:respawn-indicator:set"
+          >- 145m -</span
+        >
+      </button>
     </div>
-    <div class="element-scale" style="width: 100%;top: 32%;position: absolute;text-align: center;display: block;" data-pc-element-show="text:game-message:show" data-pc-element-hide="text:game-message:hide"><span class="animate__animated animate__flash" style="text-shadow: 0px 0px 5px rgb(15,29,44);font-size: 41px;text-align: center;color: var(--bs-body-bg);user-select: none;" data-pc-text-set="text:game-message:set">Checkpoint reached!</span></div>
+    <div
+      class="container-sm text-center controls-big"
+      style="
+        height: 170px;
+        position: absolute;
+        bottom: 10%;
+        max-width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+      "
+    >
+      <button
+        class="btn btn-primary button-action animate__animated animate__bounce"
+        type="button"
+        style="
+          background: transparent;
+          border-style: none;
+          text-shadow: 0px 0px 5px rgb(15, 29, 44);
+          float: right;
+          font-size: 90px;
+        "
+        title="Jump"
+      >
+        <i
+          class="far fa-arrow-alt-circle-up icon-action"
+          data-pc-btn-pressed="interface:player:jump"
+          style="pointer-events: all"
+        ></i>
+      </button>
+    </div>
+    <div
+      class="d-flex mx-auto masthead"
+      style="height: 100%; min-height: 100%; background: none"
+    >
+      <div
+        class="container text-center ad-checkpoint-container"
+        style="
+          margin-right: 0;
+          position: absolute;
+          display: block;
+          top: 10%;
+          left: 0px;
+          padding: 0px;
+          z-index: 10000;
+        "
+        data-pc-element-show="ad:respawnCheckpointButton:show"
+        data-pc-element-hide="ad:respawnCheckpointButton:hide"
+      >
+        <div
+          class="ad-container ad-container-green animate__bounceInLeft animate__animated"
+          style="
+            height: 65px;
+            background: linear-gradient(
+              90deg,
+              var(--bs-body-bg) 75%,
+              #12a220 91%
+            );
+            position: relative;
+            box-shadow: 0px 3px 5px 0px rgba(33, 37, 41, 0.64);
+            cursor: pointer;
+            pointer-events: all;
+            max-width: 405px;
+          "
+          data-pc-btn-click="ad:watch:respawnCheckpoint"
+          data-pc-trigger-click="input:keyboard:KEY_C"
+          data-pc-parent-close=""
+        >
+          <span
+            style="
+              position: absolute;
+              left: 20px;
+              display: block;
+              margin-top: 8px;
+              margin-left: 10px;
+              text-align: left;
+              font-size: 33px;
+              margin-right: 00px;
+              color: var(--bs-body-color);
+            "
+            ><img
+              class="ad-thumbnail"
+              src="assets/img/icon-street-lights.png"
+              style="
+                width: 45px;
+                height: 45px;
+                margin-right: 15px;
+                margin-top: -13px;
+              "
+            /><span>CHECKPOINT</span
+            ><span class="hide-on-mobile">&nbsp;[C]</span
+            ><span
+              class="action-label-indicator"
+              style="font-size: 21px; margin-left: 5px"
+              data-pc-text-set="text:checkpoint-indicator:set"
+              >&nbsp;145m&nbsp;</span
+            ></span
+          >
+        </div>
+      </div>
+      <div
+        class="container text-center ad-respawn-container"
+        style="
+          margin-right: 0;
+          position: absolute;
+          display: block;
+          top: calc(10% + 100px);
+          left: 0px;
+          padding: 0px;
+          z-index: 10000;
+        "
+        data-pc-element-show="ad:respawnLastButton:show"
+        data-pc-element-hide="ad:respawnLastButton:hide"
+      >
+        <div
+          class="ad-container ad-container-blue animate__bounceInLeft animate__animated"
+          style="
+            height: 65px;
+            background: linear-gradient(
+              90deg,
+              var(--bs-body-bg) 63%,
+              #2d91bb 77%
+            );
+            position: relative;
+            box-shadow: 0px 3px 5px 0px rgba(33, 37, 41, 0.64);
+            cursor: pointer;
+            pointer-events: all;
+            max-width: 405px;
+          "
+          data-pc-btn-click="ad:watch:respawnLast"
+          data-pc-trigger-click="input:keyboard:KEY_R"
+          data-pc-parent-close=""
+        >
+          <span
+            style="
+              position: absolute;
+              left: 20px;
+              display: block;
+              margin-top: 8px;
+              margin-left: 10px;
+              text-align: left;
+              font-size: 33px;
+              margin-right: 20px;
+              color: var(--bs-body-color);
+            "
+            ><img
+              class="ad-thumbnail"
+              src="assets/img/icon-reward-bw.png"
+              style="
+                width: 45px;
+                height: 45px;
+                margin-right: 15px;
+                margin-top: -13px;
+              "
+            /><span>RESPAWN!</span><span class="hide-on-mobile">&nbsp;[R]</span
+            ><span
+              class="action-label-indicator"
+              style="font-size: 21px; margin-left: 5px"
+              data-pc-text-set="text:respawn-indicator:set"
+              >&nbsp;145m</span
+            ></span
+          >
+        </div>
+      </div>
+      <div
+        class="container text-center ad-respawn-container"
+        style="
+          margin-right: 0;
+          position: absolute;
+          display: none;
+          top: calc(10% + 100px);
+          left: 0px;
+          padding: 0px;
+          z-index: 10000;
+        "
+        data-pc-element-show="ad:travelUpButton:show"
+        data-pc-element-hide="ad:travelUpButton:hide"
+      >
+        <div
+          class="ad-container ad-container-red animate__bounceInLeft animate__animated"
+          style="
+            height: 65px;
+            background: linear-gradient(
+              90deg,
+              var(--bs-body-bg) 63%,
+              #dc8929 77%
+            );
+            position: relative;
+            box-shadow: 0px 3px 5px 0px rgba(33, 37, 41, 0.64);
+            cursor: pointer;
+            pointer-events: all;
+            max-width: 405px;
+          "
+          data-pc-btn-click="ad:watch:travelUp"
+          data-pc-trigger-click="input:keyboard:KEY_T"
+          data-pc-parent-close=""
+        >
+          <span
+            style="
+              position: absolute;
+              left: 20px;
+              display: block;
+              margin-top: 8px;
+              margin-left: 10px;
+              text-align: left;
+              font-size: 33px;
+              margin-right: 20px;
+              color: var(--bs-body-color);
+            "
+            ><img
+              class="ad-thumbnail"
+              src="assets/img/icon-reward-bw.png"
+              style="
+                width: 45px;
+                height: 45px;
+                margin-right: 15px;
+                margin-top: -13px;
+              "
+            /><span>TRAVEL UP</span><span class="hide-on-mobile">&nbsp;[T]</span
+            ><span
+              class="action-label-indicator"
+              style="font-size: 21px; margin-left: 5px"
+              data-pc-text-set="text:travelUp-indicator:set"
+              >300m</span
+            ></span
+          >
+        </div>
+      </div>
+      <div
+        class="container text-center ad-save-container"
+        style="
+          margin-right: 0;
+          position: absolute;
+          display: none;
+          top: 20%;
+          left: 0px;
+          padding: 0px;
+          z-index: 10000;
+        "
+        data-pc-element-show="ad:saveCheckpoint:show"
+        data-pc-element-hide="ad:saveCheckpoint:hide"
+      >
+        <div
+          class="ad-container ad-container-green animate__bounceInLeft animate__animated"
+          style="
+            height: 65px;
+            background: linear-gradient(
+              90deg,
+              var(--bs-body-bg) 63%,
+              #12a220 77%
+            );
+            position: relative;
+            box-shadow: 0px 3px 5px 0px rgba(33, 37, 41, 0.64);
+            cursor: pointer;
+            pointer-events: all;
+            max-width: 405px;
+          "
+          data-pc-btn-click="ad:watch:saveCheckpoint"
+          data-pc-trigger-click="input:keyboard:KEY_C"
+          data-pc-parent-close=""
+        >
+          <span
+            style="
+              position: absolute;
+              left: 20px;
+              display: block;
+              margin-top: 8px;
+              margin-left: 10px;
+              text-align: left;
+              font-size: 33px;
+              margin-right: 20px;
+              color: var(--bs-body-color);
+            "
+            ><img
+              class="ad-thumbnail"
+              src="assets/img/icon-reward-bw.png"
+              style="
+                width: 45px;
+                height: 45px;
+                margin-right: 15px;
+                margin-top: -13px;
+              "
+            /><img
+              src="assets/img/icon-street-lights.png"
+              width="40"
+              height="40"
+              style="
+                position: absolute;
+                float: right;
+                right: -60px;
+                margin-top: 4px;
+                z-index: 10;
+              "
+            /><span>CHECKPOINT</span
+            ><span class="hide-on-mobile" style="margin-left: 5px"
+              >[C]</span
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="element-scale"
+      style="
+        width: 100%;
+        top: 32%;
+        position: absolute;
+        text-align: center;
+        display: block;
+      "
+      data-pc-element-show="text:game-message:show"
+      data-pc-element-hide="text:game-message:hide"
+    >
+      <span
+        class="animate__animated animate__flash"
+        style="
+          text-shadow: 0px 0px 5px rgb(15, 29, 44);
+          font-size: 41px;
+          text-align: center;
+          color: var(--bs-body-bg);
+          user-select: none;
+        "
+        data-pc-text-set="text:game-message:set"
+        >Checkpoint reached!</span
+      >
+    </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-</body>
-
+  </body>
 </html>

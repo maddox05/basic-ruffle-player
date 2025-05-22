@@ -1,183 +1,188 @@
 <!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Burrito Bison</title>
+    <title>ducky</title>
     <style>
-        html {
-            box-sizing: border-box;
-        }
+      html {
+          box-sizing: border-box;
+      }
 
-        *,
-        *:before,
-        *:after {
-            box-sizing: inherit;
-        }
+      *,
+      *:before,
+      *:after {
+          box-sizing: inherit;
+      }
 
-        body {
-            margin: 0;
-            background: #000000;
-        }
+      body {
+          margin: 0;
+          background: #000000;
+      }
 
-        #gameContainer {
-            width: 100vw;
-            height: 100vh;
-        }
+      #gameContainer {
+          width: 100vw;
+          height: 100vh;
+      }
 
-        canvas {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
+      canvas {
+          width: 100%;
+          height: 100%;
+          display: block;
+      }
 
-        .logo {
-            display: block;
-            width: max-width: 100vw;
-            height: max-height: 70vh;
-        }
+      .logo {
+          display: block;
+          width: max-width: 100vw;
+          height: max-height: 70vh;
+      }
 
-        .progress {
-            margin: 1.5em;
-            border: 1px solid white;
-            width: 50vw;
-            display: none;
-        }
+      .progress {
+          margin: 1.5em;
+          border: 1px solid white;
+          width: 50vw;
+          display: none;
+      }
 
-        .progress .full {
-            margin: 2px;
-            background: white;
-            height: 1em;
-            transform-origin: top left;
-        }
+      .progress .full {
+          margin: 2px;
+          background: white;
+          height: 1em;
+          transform-origin: top left;
+      }
 
-        #loader {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+      #loader {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
 
-        .spinner,
-        .spinner:after {
-            border-radius: 50%;
-            width: 5em;
-            height: 5em;
-        }
+      .spinner,
+      .spinner:after {
+          border-radius: 50%;
+          width: 5em;
+          height: 5em;
+      }
 
-        .spinner {
-            margin: 10px;
-            font-size: 10px;
-            position: relative;
-            text-indent: -9999em;
-            border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-left: 1.1em solid #ffffff;
-            transform: translateZ(0);
-            animation: spinner-spin 1.1s infinite linear;
-        }
+      .spinner {
+          margin: 10px;
+          font-size: 10px;
+          position: relative;
+          text-indent: -9999em;
+          border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+          border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+          border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+          border-left: 1.1em solid #ffffff;
+          transform: translateZ(0);
+          animation: spinner-spin 1.1s infinite linear;
+      }
 
-        @keyframes spinner-spin {
-            0% {
-                transform: rotate(0deg);
-            }
+      @keyframes spinner-spin {
+          0% {
+              transform: rotate(0deg);
+          }
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+          100% {
+              transform: rotate(360deg);
+          }
+      }
     </style>
     <script src="Build/UnityLoader.js"></script>
     <script src="Build/kongregate_api.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        kongregateAPI.loadAPI(function () {
-            window.kongregate = kongregateAPI.getAPI();
-            // You can now access the Kongregate API with:
-            // kongregate.services.getUsername(), etc
-            // Proceed with loading your game...
+      kongregateAPI.loadAPI(function () {
+        window.kongregate = kongregateAPI.getAPI();
+        // You can now access the Kongregate API with:
+        // kongregate.services.getUsername(), etc
+        // Proceed with loading your game...
 
-            // Backup the original submit method
-            const originalSubmit = kongregate.stats.submit;
-            // Override with your own logic
-            kongregate.stats.submit = function (statName, value) {
-                //console.log(`Intercepted stat: ${statName} = ${value}`);
+        // Backup the original submit method
+        const originalSubmit = kongregate.stats.submit;
+        // Override with your own logic
+        kongregate.stats.submit = function (statName, value) {
+          //console.log(`Intercepted stat: ${statName} = ${value}`);
 
+          if (statName === "maxdistance") {
+            // Post to parent
+            window.parent.postMessage(
+              {
+                type: "HIGH_SCORE",
+                score: value,
+              },
+              "*"
+            ); // Replace "*" with specific origin for security in production
+          }
 
-                if (statName === "maxdistance") {
-                    // Post to parent
-                    window.parent.postMessage({
-                        type: "HIGH_SCORE",
-                        score: value
-                    }, "*"); // Replace "*" with specific origin for security in production
-                }
-
-                // Optionally call the original Kongregate submit
-                // Comment this out if you want to completely override
-                originalSubmit.call(kongregate.stats, statName, value);
-            };
-
-        });
+          // Optionally call the original Kongregate submit
+          // Comment this out if you want to completely override
+          originalSubmit.call(kongregate.stats, statName, value);
+        };
+      });
     </script>
-    <div id="gameContainer"
-        style="padding: 0px; margin: 0px; border: 0px; position: relative; background: rgb(0, 0, 0);"><canvas
-            id="#canvas" style="width: 100%; height: 100%;"></canvas></div>
+    <div
+      id="gameContainer"
+      style="
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        position: relative;
+        background: rgb(0, 0, 0);
+      "
+    >
+      <canvas id="#canvas" style="width: 100%; height: 100%"></canvas>
+    </div>
     <div id="loader">
-        <img class="logo" src="Build/logo.png">
-        <div class="spinner" style="display: none;"></div>
-        <div class="progress" style="display: block;">
-            <div class="full" style="transform: scaleX(0.9);"></div>
-        </div>
+      <img class="logo" src="Build/logo.png" />
+      <div class="spinner" style="display: none"></div>
+      <div class="progress" style="display: block">
+        <div class="full" style="transform: scaleX(0.9)"></div>
+      </div>
     </div>
 
-
-
-
-
-
-
-
-
-
     <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json", {
-            onProgress: UnityProgress
-        });
-
-        function UnityProgress(gameInstance, progress) {
-            if (!gameInstance.Module) {
-                return;
-            }
-            const loader = document.querySelector("#loader");
-            if (!gameInstance.progress) {
-                const progress = document.querySelector("#loader .progress");
-                progress.style.display = "block";
-                gameInstance.progress = progress.querySelector(".full");
-                loader.querySelector(".spinner").style.display = "none";
-            }
-            gameInstance.progress.style.transform = `scaleX(${progress})`;
-            if (progress === 1 && !gameInstance.removeTimeout) {
-                loader.style.display = "none";
-            }
-
+      var gameInstance = UnityLoader.instantiate(
+        "gameContainer",
+        "Build/Web.json",
+        {
+          onProgress: UnityProgress,
         }
+      );
+
+      function UnityProgress(gameInstance, progress) {
+        if (!gameInstance.Module) {
+          return;
+        }
+        const loader = document.querySelector("#loader");
+        if (!gameInstance.progress) {
+          const progress = document.querySelector("#loader .progress");
+          progress.style.display = "block";
+          gameInstance.progress = progress.querySelector(".full");
+          loader.querySelector(".spinner").style.display = "none";
+        }
+        gameInstance.progress.style.transform = `scaleX(${progress})`;
+        if (progress === 1 && !gameInstance.removeTimeout) {
+          loader.style.display = "none";
+        }
+      }
     </script>
 
+    <!-- Cloudflare Pages Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "26aceae2a095430ebcd1464e60f251c7"}'
+    ></script>
+    <!-- Cloudflare Pages Analytics -->
+  </body>
 
-
-
-
-<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "26aceae2a095430ebcd1464e60f251c7"}'></script><!-- Cloudflare Pages Analytics --></body>
-
-<!-- <script src='https://cdn1.kongregate.com/javascripts/kongregate_api.js'></script> -->
-
+  <!-- <script src='https://cdn1.kongregate.com/javascripts/kongregate_api.js'></script> -->
 </html>
