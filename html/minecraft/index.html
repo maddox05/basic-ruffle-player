@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ducky</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta property="og:locale" content="en-US" />
-    <meta property="og:type" content="website" />
-    <!-- Change this: <meta property="og:image" content="https://media.discordapp.net/attachments/378764518081429506/932053915061587978/thumbnail2.png" /> -->
-
-    <!-- Change this: <meta property="og:url" content="https://g.eags.us/eaglercraft/" /> -->
+    <title>Minecraft 1.5.2</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.png" />
     <script type="text/javascript" src="classes.js"></script>
     <script type="text/javascript" src="eagswebrtc.js"></script>
+    <!-- Google tag (gtag.js) -->
     <script type="text/javascript">
       if (document.location.href.startsWith("file:")) {
         alert(
-          "You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation"
+          "You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation."
         );
       } else {
         window.addEventListener("load", function () {
@@ -26,6 +21,11 @@
             serverWorkerURI: "worker_bootstrap.js",
             worldsFolder: "MAIN",
             servers: [
+              {
+                serverName: "Derpman's Server (1.8)",
+                serverAddress: "wss://eaglerlauncher.derpmans.repl.co",
+                hideAddress: false,
+              },
               {
                 serverName: "Asspixel",
                 serverAddress: "wss://web.asspixel.net/CAP/",
@@ -131,9 +131,12 @@
                 "Darviglet!",
                 "eaglerenophile!",
                 "You Eagler!",
-                "MATH STUDY on top",
                 "Yeeeeeee!",
                 "yeee",
+                "Echo on top!",
+                "3kh0.github.io",
+                "Echo is cool",
+                "REEEEEEE",
                 "EEEEEEEEE!",
                 "You Darvig!",
                 "You Vigg!",
@@ -144,6 +147,7 @@
               eaglerLogo: false,
             },
           };
+
           (function () {
             var q = window.location.search;
             if (typeof q === "string" && q.startsWith("?")) {
@@ -157,5 +161,13 @@
       }
     </script>
   </head>
-  <body style="margin: 0px; width: 100vw; height: 100vh" id="game_frame"></body>
+  <body style="margin: 0px; width: 100vw; height: 100vh" id="game_frame">
+    <!-- Cloudflare Pages Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "cb8788813e6a4c47b96985e7680f6838"}'
+    ></script>
+    <!-- Cloudflare Pages Analytics -->
+  </body>
 </html>
